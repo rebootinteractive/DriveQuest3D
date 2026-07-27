@@ -304,7 +304,7 @@ export class EditorApp {
     if (!hit) return;
 
     this.dragHandle = hit.object.userData.handleIndex as number;
-    this.stage.controls.enabled = false;
+    this.stage.setRotationEnabled(false);
   };
 
   private onPointerMove = (e: PointerEvent) => {
@@ -325,7 +325,7 @@ export class EditorApp {
   private onPointerUp = () => {
     if (this.dragHandle === null) return;
     this.dragHandle = null;
-    this.stage.controls.enabled = true;
+    this.stage.setRotationEnabled(true);
     this.refreshStatus();
   };
 

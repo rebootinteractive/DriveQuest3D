@@ -13,9 +13,13 @@ export const CAR_LIFT = 0.27;
  */
 export const COLLIDE_R = 0.4;
 
-/** World units per second along the surface. */
-export const DRIVE_SPEED = 1.9;
-export const RETURN_SPEED = 4.2;
+/**
+ * World units per second along the surface. Fast enough that a send feels
+ * decisive; a frame at the 50ms dt cap still only advances ~0.17 units against a
+ * 0.8-unit collision distance, so nothing can tunnel through a blocker.
+ */
+export const DRIVE_SPEED = 3.4;
+export const RETURN_SPEED = 7;
 
 export const ROUTE_LIFT = 0.05;
 export const SLOT_LIFT = 0.02;

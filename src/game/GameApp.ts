@@ -12,7 +12,7 @@ import { Stage } from './Stage';
 
 type CarState = 'idle' | 'driving' | 'returning' | 'parking' | 'gone';
 
-const PARK_DURATION = 0.5;
+const PARK_DURATION = 0.36;
 
 interface Car {
   id: string;
